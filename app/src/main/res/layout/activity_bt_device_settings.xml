@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brianferch.hub2.BtDeviceSettingsActivity">
+
+    <Switch
+        android:id="@+id/eq_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginTop="60dp"
+        android:checked="false"
+        android:text="Equalizer"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/eq_controls"
+        app:layout_constraintLeft_toLeftOf="@+id/eq_controls"
+        app:layout_constraintRight_toRightOf="@+id/eq_controls"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Volume"
+        app:layout_constraintLeft_toLeftOf="@+id/volume_bar"
+        app:layout_constraintTop_toBottomOf="@+id/bass_bar" />
+
+    <SeekBar
+        android:id="@+id/volume_bar"
+        android:layout_width="336dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <SeekBar
+        android:id="@+id/bass_bar"
+        android:layout_width="336dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <LinearLayout
+        android:id="@+id/eq_controls"
+        android:layout_width="184dp"
+        android:layout_height="253dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:rotation="270"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/eq_bar_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="-26dp" />
+
+        <SeekBar
+            android:id="@+id/eq_bar_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <SeekBar
+            android:id="@+id/eq_bar_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <SeekBar
+            android:id="@+id/eq_bar_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <SeekBar
+            android:id="@+id/eq_bar_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="306dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="50dp"
+        android:text="+10 dB"
+        app:layout_constraintRight_toLeftOf="@+id/eq_controls"
+        app:layout_constraintTop_toTopOf="@+id/eq_controls" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="8dp"
+        android:text="0 dB"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintRight_toLeftOf="@+id/eq_controls"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="30dp"
+        android:text="-10 dB"
+        app:layout_constraintBottom_toBottomOf="@+id/eq_controls"
+        app:layout_constraintRight_toLeftOf="@+id/eq_controls" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="185dp"
+        android:text="60 Hz"
+        app:layout_constraintBottom_toBottomOf="@+id/eq_controls"
+        app:layout_constraintLeft_toLeftOf="@+id/eq_controls"
+        app:layout_constraintRight_toRightOf="@+id/eq_controls" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginStart="225dp"
+        android:text="14 kHz"
+        app:layout_constraintBottom_toBottomOf="@+id/eq_controls"
+        app:layout_constraintLeft_toLeftOf="@+id/eq_controls"
+        app:layout_constraintRight_toRightOf="@+id/eq_controls" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="230 Hz"
+        app:layout_constraintBottom_toBottomOf="@+id/eq_controls"
+        app:layout_constraintLeft_toRightOf="@+id/textView5"
+        app:layout_constraintRight_toLeftOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="910 Hz"
+        app:layout_constraintBottom_toBottomOf="@+id/eq_controls"
+        app:layout_constraintLeft_toRightOf="@+id/textView5"
+        app:layout_constraintRight_toLeftOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="4 kHz"
+        app:layout_constraintBottom_toBottomOf="@+id/eq_controls"
+        app:layout_constraintLeft_toRightOf="@+id/textView12"
+        app:layout_constraintRight_toLeftOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bass"
+        app:layout_constraintLeft_toLeftOf="@+id/bass_bar"
+        app:layout_constraintTop_toBottomOf="@+id/eq_controls" />
+
+</android.support.constraint.ConstraintLayout>
+
